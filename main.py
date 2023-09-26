@@ -1,24 +1,18 @@
-#1.1 Implement a recursibe function to calculate the factorial of given number
-"""
-1!=1x1
-2!=2x1!--->2x1
-3!=3x2!--->3x2x1
-.
-.
-10!=10x9!--->10x9x8x...x1
-
-Formula-nx(n-1)!
-"""
-
-
-def fact_rec(n):
-  if n == 0 or n == 1:
-    return 1
-  else:
-    return n * fact_rec(n - 1)
-
-
-number = int(input("Enter a value:"))
-res = fact_rec(number)
-
-print("The factorial of {}.".format(number, res))
+def linear_Search(list1, n, key):  
+  
+    # Searching list1 sequentially  
+    for i in range(0, n):  
+        if (list1[i] == key):  
+            return i  
+    return -1  
+  
+  
+list1 = [1 ,3, 5, 4, 7, 9]  
+key = 7  
+  
+n = len(list1)  
+res = linear_Search(list1, n, key)  
+if(res == -1):  
+    print("Element not found")  
+else:  
+    print("Element found at index: ", res)
